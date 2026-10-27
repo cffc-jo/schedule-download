@@ -259,8 +259,8 @@
         linkButton('Google Calendar', 'google', 'btn-primary'),
       ]));
       area.appendChild(stepsList([
-        'Select the calendar you use.',
-        'Sign in if asked, then click “Add” or “Import.”',
+        'Select your preferred calendar',
+        'Sign in if asked, then click “Add” or “Import”',
       ]));
       area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Choose it under “Other Devices and Calendars” below.' }));
 

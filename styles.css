@@ -109,7 +109,7 @@ a { color: var(--cf-primary); }
 
 /* ---------- Feed picker: All / Home / Away on one line ----------
    Each option is a hidden radio button + a <span> styled as a button. */
-.feed-picker { border: 0; margin: 0 0 1rem; padding: 0; min-width: 0; }
+.feed-picker { border: 0; margin: 0; padding: 0; min-width: 0; }
 
 .feed-options {
   display: grid;
@@ -211,7 +211,8 @@ a { color: var(--cf-primary); }
   padding-left: 1.5rem;
 }
 .steps li { margin-bottom: .35rem; }
-.steps li::marker { font-weight: 700; color: var(--cf-primary); }
+/* Step numbers: 1.2em bold counts as "large text", so blue only needs 3:1 contrast */
+.steps li::marker { font-weight: 700; font-size: 1.2em; color: var(--cf-step-number); }
 
 .hint {
   font-size: .9375rem;

@@ -179,7 +179,7 @@ when the page link is shared in a message.
 
 **Text** – in `config.js`:
 - Section 4 (**PAGE TEXT**): the small line at the top ("Chicago Fire FC")
-  and the main heading ("2026 Schedule"). Update the year each season.
+  and the main heading ("Sync the 2026 Schedule"). Update the year each season.
 - Section 2: each calendar's `name` (what it's called in the fan's calendar
   app) and `label` (the text on the All / Home / Away buttons).
 

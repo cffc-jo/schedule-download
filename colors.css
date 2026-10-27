@@ -23,14 +23,15 @@
   --flag-blue:  #7DCCF0;  /* Light blue from the flag. Too light for text on white. */
   --blue:       #52B3E3;  /* Too light for text on white. */
   --deep-blue:  #3A95CE;  /* 3.3:1 on white – large text or decoration only. */
-  --dark-blue:  #1D80D5;  /* 4.2:1 on white – large text or decoration only. */
+  --dark-blue:  #1D80D5;  /* 4.1:1 on white – large text or decoration only. */
 
   /* ---- Part 2: Where each color is used on the page --------------------- */
-  --cf-primary:       var(--red);       /* main buttons, headings, step numbers (white text on it) */
+  --cf-primary:       var(--red);       /* main buttons, headings (white text on it) */
   --cf-primary-hover: var(--deep-red);  /* main buttons when hovered */
   --cf-secondary:     #515373;          /* small grey text (a softened navy, 7.4:1 on white) */
   --cf-accent:        var(--navy);      /* "Get tickets" button, All/Home/Away buttons (white text when selected) */
   --cf-highlight:     var(--fire-red);  /* thin decorative stripe at the top of the page */
+  --cf-step-number:   var(--dark-blue); /* numbers on the 1-2-3 steps (shown large: 4.1:1 on white) */
   --cf-dark:          var(--navy);      /* body text, test banner, keyboard focus outline */
   --cf-light:         #F5F5F8;          /* page background (near-white with a hint of navy) */
 }
