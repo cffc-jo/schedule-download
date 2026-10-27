@@ -32,12 +32,12 @@ body {
   padding: 1.25rem 1rem 3rem;
 }
 
-h1, h2, .feed-picker legend, .logo-text {
+h1, h2, .preheader {
   font-family: var(--font-headline);
   font-weight: 700;
 }
 h1, h2 { line-height: 1.2; margin: 0 0 .5rem; }
-h1 { font-size: 1.875rem; color: var(--cf-primary); }
+h1 { font-size: 2.25rem; color: var(--cf-primary); margin: 0; }
 h2 { font-size: 1.1875rem; }
 
 a { color: var(--cf-primary); }
@@ -88,13 +88,12 @@ a { color: var(--cf-primary); }
   margin: 0 auto 1rem;
 }
 
-.logo-text {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: .06em;
+.preheader {
+  margin: 0 0 .25rem;
+  font-size: 1rem;
+  letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--cf-primary);
+  color: var(--cf-dark);
 }
 
 .intro { margin: 0; color: var(--cf-dark); }
@@ -108,55 +107,53 @@ a { color: var(--cf-primary); }
   margin-bottom: 1rem;
 }
 
-.step-num {
-  display: inline-grid;
-  place-items: center;
-  width: 1.75rem; height: 1.75rem;
-  margin-right: .4rem;
-  border-radius: 50%;
-  background: var(--cf-primary);
-  color: var(--white);
-  font-size: .9375rem;
-  vertical-align: 2px;
+/* ---------- Feed picker: All / Home / Away on one line ----------
+   Each option is a hidden radio button + a <span> styled as a button. */
+.feed-picker { border: 0; margin: 0 0 1rem; padding: 0; min-width: 0; }
+
+.feed-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
 }
 
-/* ---------- Step 1: feed picker (radio group) ---------- */
-.feed-picker { border: 0; margin: 0; padding: 0; min-width: 0; }
-.feed-picker legend {
-  padding: 0;
-  margin-bottom: .75rem;
-  font-size: 1.1875rem;
-  font-weight: 700;
+.feed-option { position: relative; display: flex; cursor: pointer; }
+
+/* Hide the round radio dot, but keep it for keyboards and screen readers */
+.feed-option input {
+  position: absolute;
+  opacity: 0;
+  width: 1px; height: 1px;
+  margin: 0;
 }
 
-.feed-options { display: grid; gap: .5rem; }
-
-.feed-option {
+.feed-option span {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: .75rem;
+  justify-content: center;
   min-height: var(--tap);
-  padding: .75rem .875rem;
-  border: 2px solid var(--border);
+  padding: .5rem;
+  border: 2px solid var(--cf-accent);
   border-radius: var(--radius);
-  cursor: pointer;
+  background: var(--white);
+  color: var(--cf-accent);
+  font-weight: 700;
+  font-size: 1.0625rem;
 }
-.feed-option input {
-  flex: none;
-  width: 1.375rem; height: 1.375rem;
-  margin: 0;
-  accent-color: var(--cf-accent);
+.feed-option:hover span { background: var(--cf-light); }
+
+/* Selected */
+.feed-option input:checked + span {
+  background: var(--cf-accent);
+  color: var(--white);
 }
-.feed-option:has(input:checked) {
-  border-color: var(--cf-accent);
-  background: color-mix(in srgb, var(--cf-accent) 7%, var(--white));
-}
-.feed-option:has(input:focus-visible) {
+
+/* Keyboard focus */
+.feed-option input:focus-visible + span {
   outline: 3px solid var(--cf-dark);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
-.feed-label { font-weight: 700; display: block; }
-.feed-detail { font-size: .9375rem; color: var(--cf-secondary); display: block; }
 
 /* ---------- Buttons ---------- */
 .btn {

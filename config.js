@@ -31,28 +31,24 @@ window.CF_CONFIG = {
        https://calendar.google.com/calendar/ical/XXXXXXXX/public/basic.ics
      Every other link (Apple, Google, Outlook, copy link) is built from it.
 
-     name   = the calendar's name when it's added to a fan's calendar app
-     label  = the short title on the choice buttons on the page
-     detail = the small line under the label
+     name  = the calendar's name when it's added to a fan's calendar app
+     label = the text on the All / Home / Away buttons on the page
      ------------------------------------------------------------------------ */
   CALENDARS: {
     all: {
       icalUrl: 'https://calendar.google.com/calendar/ical/c45f999fe76e7be2ffc7ef3ef13aed9a0ee5bd938dfe62ab8c3cc915cae1cbaf%40group.calendar.google.com/public/basic.ics',
       name:    'Chicago Fire FC – All Matches',
-      label:   'All Matches',
-      detail:  'Every match, home and away',
+      label:   'All',
     },
     home: {
       icalUrl: 'https://calendar.google.com/calendar/ical/96ec7f6ad0f8984fe53d34f0ded0fde5358e7f71a14800a762277469e91b48ca%40group.calendar.google.com/public/basic.ics',
       name:    'Chicago Fire FC – Home Matches',
-      label:   'Home Matches',
-      detail:  'Only matches in Chicago',
+      label:   'Home',
     },
     away: {
       icalUrl: 'https://calendar.google.com/calendar/ical/86e232d562be0b2b582d0e3980dd9875a31095a9c7c2e5e6c9c57d0966644ae5%40group.calendar.google.com/public/basic.ics',
       name:    'Chicago Fire FC – Away Matches',
-      label:   'Away Matches',
-      detail:  'Only road matches',
+      label:   'Away',
     },
   },
 
@@ -66,12 +62,12 @@ window.CF_CONFIG = {
 
   /* ------------------------------------------------------------------------
      4. PAGE TEXT
-     {name} is replaced with the fan's first name, if we have it.
+     preheader = the small line above the main heading
+     heading   = the main heading at the top of the page
      ------------------------------------------------------------------------ */
   TEXT: {
-    greetingWithName: 'You’re in, {name}!',
-    greetingNoName:   'You’re in!',
-    intro:            'Thanks for signing up. Add the Chicago Fire FC schedule to your calendar and every match shows up automatically – including any time changes during the season.',
+    preheader: 'Chicago Fire FC',
+    heading:   '2026 Schedule',
   },
 
   /* ------------------------------------------------------------------------

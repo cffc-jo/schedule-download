@@ -53,39 +53,38 @@ This setting belongs to one form, so it won't affect any of your other forms.
 4. Paste this address:
 
    ```
-   https://cffc-jo.github.io/schedule-download/?name={firstName}&feed={whichMatches}
+   https://cffc-jo.github.io/schedule-download/?feed={whichMatches}
    ```
 
-5. Replace `{firstName}` and `{whichMatches}` with your form's real field names
-   (see below). Keep the curly braces `{ }`.
+5. Replace `{whichMatches}` with the real field name of your "which matches"
+   question (see below). Keep the curly braces `{ }`.
 6. Click **Save** (or **Update**).
 
-### Finding each field's "unique name"
+If your form doesn't ask which matches, you can use just
+`https://cffc-jo.github.io/schedule-download/` – the page then starts on **All**.
+
+### Finding the field's "unique name"
 
 Every Jotform field has a unique name, which Jotform uses as the placeholder.
 
-1. In the Form Builder (**Build** tab), click the field (e.g. the first-name field).
+1. In the Form Builder (**Build** tab), click the "which matches" question.
 2. Click the **gear icon** (Properties) next to it.
 3. Open the **Advanced** tab and look for **Unique Name** (under Field Details).
-   It looks like `firstName` or `name3`.
-4. Do the same for the "which matches" question.
+   It looks like `whichMatches` or `input5`.
 
 Tip: the redirect box may also have a **Form Fields** button that inserts a
-field for you. If your form uses a combined **Full Name** field, pick the
-**First Name** part only, so the greeting doesn't show the fan's last name.
+field for you.
 
-### What the page does with these values
+### What the page does with this value
 
-- **name** – shown in the greeting ("You're in, Maria!"). It's cut to 40
-  characters, and anything that looks like an email, phone number, or empty
-  Jotform placeholder is ignored (the page just says "You're in!").
-- **feed** – pre-selects the calendar. It's matched loosely, so answers like
-  `Home Matches`, `home`, or `HOME` work. Anything containing "home" picks
+- **feed** – pre-selects All, Home or Away. It's matched loosely, so answers
+  like `Home Matches`, `home`, or `HOME` work. Anything containing "home" picks
   Home, anything containing "away" picks Away, and everything else picks All.
   So your Jotform answer options can be worded however you like, as long as
   the Home and Away options include those words.
-- Both values are removed from the address bar right away, so the fan's name
-  doesn't stay in their browser history or in links they share.
+- It's removed from the address bar right away, so links fans share start clean.
+- The page doesn't use the fan's name. If an older redirect link still adds
+  `?name=`, the page ignores it and removes it from the address bar.
 - **Never** add email or phone fields to the redirect address. The page
   ignores them, but they would still appear briefly in the address.
 
@@ -179,8 +178,8 @@ style (e.g. Medium), convert the `.otf` to `.woff2`, put it in
 when the page link is shared in a message.
 
 **Text** – in `config.js`:
-- Section 4 (**PAGE TEXT**): the greeting and intro paragraph.
-  `{name}` is where the fan's first name goes.
+- Section 4 (**PAGE TEXT**): the small line at the top ("Chicago Fire FC")
+  and the main heading ("2026 Schedule"). Update the year each season.
 - Section 2: each calendar's `name` (what it's called in the fan's calendar
   app), `label` and `detail` (the choice buttons on the page).
 
@@ -233,14 +232,10 @@ in the calendar app (November and early December 2026, titled
       appears at the top. "Copy page link" works.
 - [ ] **"Copy calendar link":** paste the copied link somewhere – it should be
       the `.ics` address.
-- [ ] **Name values:** submit the form with a normal first name, with the name
-      left blank, with a very long name, and with an odd value (e.g. an email
-      address or `<b>hi</b>`). Normal → "You're in, Name!"; blank/odd →
-      "You're in!"; long → cut off at 40 characters.
 - [ ] **Feed values:** submit once with each answer (All / Home / Away) and
       check the right option is pre-selected. Subscribe to Home and Away and
       check each only has its own matches.
-- [ ] **Address bar:** after the page loads, the name and feed are gone from
+- [ ] **Address bar:** after the page loads, the feed value is gone from
       the address.
 - [ ] **After going live:** repeat a quick iPhone + Android test with
       `TEST_MODE: false`.

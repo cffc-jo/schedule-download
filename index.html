@@ -52,34 +52,33 @@
     </section>
 
     <header class="masthead">
-      <!-- Official logo. If assets/logo.png is missing, we try logo.svg, then show text. -->
-      <p id="logo-text" class="logo-text" hidden>Chicago Fire FC</p>
+      <!-- Official logo. If assets/logo.png is missing, we try logo.svg, then hide it
+           (the "Chicago Fire FC" preheader below still shows the club name). -->
       <img id="logo" class="logo" src="assets/logo.png" alt="Chicago Fire FC" width="96" height="96"
            onerror="if (!this.dataset.triedSvg) { this.dataset.triedSvg = '1'; this.src = 'assets/logo.svg'; }
-                    else { this.hidden = true; document.getElementById('logo-text').hidden = false; }">
+                    else { this.hidden = true; }">
 
-      <h1 id="greeting">You&rsquo;re in!</h1>
-      <p id="intro" class="intro"></p>
+      <p id="preheader" class="preheader">Chicago Fire FC</p>
+      <h1 id="heading">2026 Schedule</h1>
     </header>
 
     <noscript>
       <p class="config-error">Please turn on JavaScript to see the calendar buttons.</p>
     </noscript>
 
-    <!-- Step 1: which calendar -->
-    <form class="card" onsubmit="return false">
+    <!-- Which calendar: All / Home / Away. These are radio buttons styled as
+         buttons, so keyboards and screen readers still treat them as one choice. -->
+    <form onsubmit="return false">
       <fieldset class="feed-picker">
-        <legend><span class="step-num" aria-hidden="true">1</span> Pick your matches</legend>
+        <legend class="visually-hidden">Which matches?</legend>
         <div id="feed-options" class="feed-options">
-          <!-- Radio buttons are added here by app.js from config.js -->
+          <!-- Buttons are added here by app.js from config.js -->
         </div>
       </fieldset>
     </form>
 
-    <!-- Step 2: add it -->
-    <section class="card" aria-labelledby="add-title">
-      <h2 id="add-title"><span class="step-num" aria-hidden="true">2</span> Add it to your calendar</h2>
-
+    <!-- Add it to a calendar -->
+    <section class="card" aria-label="Add to your calendar">
       <p id="config-error" class="config-error" role="alert" hidden></p>
 
       <!-- The main button(s) for this fan's device are added here by app.js -->

@@ -29,7 +29,7 @@
   --cf-primary:       var(--red);       /* main buttons, headings, step numbers (white text on it) */
   --cf-primary-hover: var(--deep-red);  /* main buttons when hovered */
   --cf-secondary:     #515373;          /* small grey text (a softened navy, 7.4:1 on white) */
-  --cf-accent:        var(--navy);      /* "Get tickets" button, selected match choice (white text on it) */
+  --cf-accent:        var(--navy);      /* "Get tickets" button, All/Home/Away buttons (white text when selected) */
   --cf-highlight:     var(--fire-red);  /* thin decorative stripe at the top of the page */
   --cf-dark:          var(--navy);      /* body text, test banner, keyboard focus outline */
   --cf-light:         #F5F5F8;          /* page background (near-white with a hint of navy) */

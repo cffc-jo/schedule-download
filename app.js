@@ -3,7 +3,7 @@
    Plain JavaScript, no libraries. All settings live in config.js.
 
    What this file does, in order:
-     1. Reads ?name= and ?feed= from the address, then removes them.
+     1. Reads ?feed= from the address, then removes it.
      2. Works out the fan's device (or uses ?device= for previewing).
      3. Builds the calendar links from the iCal addresses in config.js.
      4. Shows the right button(s) and steps for that device.
@@ -13,7 +13,6 @@
 
   var CONFIG = window.CF_CONFIG || {};
   var FEEDS = ['all', 'home', 'away'];
-  var MAX_NAME_LENGTH = 40;
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -24,21 +23,6 @@
 
   var params = new URLSearchParams(window.location.search);
 
-  // First name for the greeting. Returns '' if missing or unusable.
-  function cleanName(raw) {
-    if (!raw) return '';
-    var name = raw
-      .replace(/[\u0000-\u001F\u007F]/g, '')  // control characters
-      .replace(/\s+/g, ' ')                    // collapse spaces
-      .trim();
-    // Jotform leaves the placeholder (e.g. "{firstName}") if a field is empty.
-    if (/[{}<>]/.test(name)) return '';
-    // Never show anything that looks like an email address or phone number.
-    if (name.indexOf('@') !== -1 || /\d{3,}/.test(name)) return '';
-    // Cut to 40 characters (Array.from keeps emoji/accents in one piece).
-    return Array.from(name).slice(0, MAX_NAME_LENGTH).join('').trim();
-  }
-
   // "Home Matches", "home", "HOME" -> 'home'. Anything else -> 'all'.
   function cleanFeed(raw) {
     var value = String(raw || '').toLowerCase();
@@ -47,12 +31,12 @@
     return 'all';
   }
 
-  var fanName = cleanName(params.get('name'));
   var selectedFeed = cleanFeed(params.get('feed'));
   var forcedDevice = (params.get('device') || '').toLowerCase();
 
-  // Remove name/feed from the address bar so they don't stay in browser
-  // history or get shared. (?device= is kept so previews survive a refresh.)
+  // Remove feed from the address bar so shared links start clean. Older
+  // redirect links may still add ?name=, so that is removed too (it's never
+  // shown). ?device= is kept so previews survive a refresh.
   if (params.has('name') || params.has('feed')) {
     params.delete('name');
     params.delete('feed');
@@ -113,7 +97,6 @@
       url: String(url || '').trim(),
       name: cal.name || 'Chicago Fire FC',
       label: cal.label || feed,
-      detail: cal.detail || '',
     };
   }
 
@@ -210,13 +193,10 @@
      4. BUILD THE PAGE
      ------------------------------------------------------------------------ */
 
-  function renderGreeting() {
+  function renderHeader() {
     var text = CONFIG.TEXT || {};
-    var greeting = fanName
-      ? (text.greetingWithName || 'You’re in, {name}!').replace('{name}', fanName)
-      : (text.greetingNoName || 'You’re in!');
-    $('greeting').textContent = greeting;
-    $('intro').textContent = text.intro || '';
+    if (text.preheader) $('preheader').textContent = text.preheader;
+    if (text.heading) $('heading').textContent = text.heading;
   }
 
   function renderFeedOptions() {
@@ -232,10 +212,7 @@
       });
       var label = el('label', { className: 'feed-option', 'for': 'feed-' + feed }, [
         input,
-        el('span', {}, [
-          el('span', { className: 'feed-label', text: cal.label }),
-          el('span', { className: 'feed-detail', text: cal.detail }),
-        ]),
+        el('span', { text: cal.label }),
       ]);
       container.appendChild(label);
     });
@@ -282,7 +259,7 @@
         linkButton('Google Calendar', 'google', 'btn-primary'),
       ]));
       area.appendChild(stepsList([
-        'Click the calendar you use.',
+        'Select the calendar you use.',
         'Sign in if asked, then click “Add” or “Import.”',
       ]));
       area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Choose it under “Other devices / calendars” below.' }));
@@ -379,7 +356,7 @@
 
   // Run everything. If something unexpected breaks, show all options.
   try {
-    renderGreeting();
+    renderHeader();
     renderFeedOptions();
     renderPrimary();
     renderExtras();
