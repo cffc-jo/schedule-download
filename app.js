@@ -243,7 +243,7 @@
         tap + ' “Subscribe.”',
         tap + ' “Done.”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'This adds it to Apple Calendar. Use Google or Outlook instead? See “Other devices / calendars” below.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'This adds it to Apple Calendar. Use Google or Outlook instead? See “Other Devices and Calendars” below.' }));
 
     } else if (device.os === 'android') {
       area.appendChild(linkButton('Add to my calendar', 'google', 'btn-primary'));
@@ -262,7 +262,7 @@
         'Select the calendar you use.',
         'Sign in if asked, then click “Add” or “Import.”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Choose it under “Other devices / calendars” below.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Choose it under “Other Devices and Calendars” below.' }));
 
     } else {
       // Unknown device: show every option straight away.
