@@ -1,0 +1,2 @@
+# Calendar files must keep Windows-style (CRLF) line endings, as the iCalendar standard requires.
+*.ics -text
