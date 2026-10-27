@@ -47,10 +47,10 @@
     </section>
 
     <header class="masthead">
-      <!-- Official logo. If assets/logo.svg is missing, we try logo.png, then show text. -->
+      <!-- Official logo. If assets/logo.png is missing, we try logo.svg, then show text. -->
       <p id="logo-text" class="logo-text" hidden>Chicago Fire FC</p>
-      <img id="logo" class="logo" src="assets/logo.svg" alt="Chicago Fire FC"
-           onerror="if (!this.dataset.triedPng) { this.dataset.triedPng = '1'; this.src = 'assets/logo.png'; }
+      <img id="logo" class="logo" src="assets/logo.png" alt="Chicago Fire FC" width="96" height="96"
+           onerror="if (!this.dataset.triedSvg) { this.dataset.triedSvg = '1'; this.src = 'assets/logo.svg'; }
                     else { this.hidden = true; document.getElementById('logo-text').hidden = false; }">
 
       <h1 id="greeting">You&rsquo;re in!</h1>

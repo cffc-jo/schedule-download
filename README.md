@@ -17,7 +17,7 @@ submit our Jotform sign-up form.
 | `config.js` | All settings: calendar links, test mode, text, tickets link | **Yes – this is the main one** |
 | `colors.css` | Brand colors and where each one is used | Colors only |
 | `styles.css` | Layout and look of the page | Rarely |
-| `assets/` | Put the official logo here (`logo.svg` or `logo.png`) | Add files |
+| `assets/` | Official logo (`logo.png`) and browser icon (`favicon.png`) | Only to replace them |
 | `index.html` | The page layout | Rarely |
 | `app.js` | The page's logic (device detection, building links) | No |
 | `test/` | Three sample calendars with fake matches, for testing | No |
@@ -158,14 +158,17 @@ https://webaim.org/resources/contrastchecker/. That's why bright Fire Red
 (`#FF0000`, only 4.0:1) is used just for the thin stripe at the top, and the
 buttons use the deeper Red (`#AA0000`).
 
-**Logo** – upload the official logo file to the `assets` folder named exactly
-`logo.svg` (preferred) or `logo.png`. On GitHub: open the `assets` folder →
-**Add file** → **Upload files**. Until a logo is there, the page shows the
-text "Chicago Fire FC" in its place.
+**Logo** – the official crest is at `assets/logo.png` (512×512, transparent
+background). To replace it, upload a new file with the same name: on GitHub,
+open the `assets` folder → **Add file** → **Upload files**. If `logo.png` is
+ever missing, the page tries `logo.svg`, then shows the text
+"Chicago Fire FC" in its place.
 
-**Favicon and link preview** (optional) – add `assets/favicon.png` (square,
-e.g. 512×512) and `assets/og-image.png` (1200×630, shown when the link is
-shared in a message).
+**Favicon** – the browser-tab and home-screen icon is `assets/favicon.png`
+(the crest at 192×192).
+
+**Link preview** (optional) – add `assets/og-image.png` (1200×630), shown
+when the page link is shared in a message.
 
 **Text** – in `config.js`:
 - Section 4 (**PAGE TEXT**): the greeting and intro paragraph.
