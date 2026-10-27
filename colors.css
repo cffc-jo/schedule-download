@@ -1,0 +1,36 @@
+/* ==========================================================================
+   CHICAGO FIRE FC – COLOR PALETTE
+   --------------------------------------------------------------------------
+   Part 1 lists the official brand colors. Part 2 decides which brand color
+   is used where on the page. To restyle the page, change Part 2.
+
+   Contrast rule (WCAG AA): text needs a contrast ratio of at least 4.5:1
+   against its background. Ratios against white are noted below – check new
+   combinations at https://webaim.org/resources/contrastchecker/
+   ========================================================================== */
+
+:root {
+  /* ---- Part 1: Brand palette ------------------------------------------- */
+  --fire-red:   #FF0000;  /* Bright "Fire" red. 4.0:1 on white – too light for
+                             text or white-text buttons, so decoration only. */
+  --red:        #AA0000;  /* Main red. 7.8:1 on white – safe for buttons and text. */
+  --deep-red:   #760000;  /* Darker red, for hover/pressed states. */
+  --dark-red:   #450000;  /* Darkest red. */
+  --navy:       #171A45;  /* Main navy. 16.5:1 on white – body text, dark panels. */
+  --deep-navy:  #160C26;  /* Darker navy. */
+  --dark-navy:  #160008;  /* Near-black. */
+  --white:      #FFFFFF;
+  --flag-blue:  #7DCCF0;  /* Light blue from the flag. Too light for text on white. */
+  --blue:       #52B3E3;  /* Too light for text on white. */
+  --deep-blue:  #3A95CE;  /* 3.3:1 on white – large text or decoration only. */
+  --dark-blue:  #1D80D5;  /* 4.2:1 on white – large text or decoration only. */
+
+  /* ---- Part 2: Where each color is used on the page --------------------- */
+  --cf-primary:       var(--red);       /* main buttons, headings, step numbers (white text on it) */
+  --cf-primary-hover: var(--deep-red);  /* main buttons when hovered */
+  --cf-secondary:     #515373;          /* small grey text (a softened navy, 7.4:1 on white) */
+  --cf-accent:        var(--navy);      /* "Get tickets" button, selected match choice (white text on it) */
+  --cf-highlight:     var(--fire-red);  /* thin decorative stripe at the top of the page */
+  --cf-dark:          var(--navy);      /* body text, test banner, keyboard focus outline */
+  --cf-light:         #F5F5F8;          /* page background (near-white with a hint of navy) */
+}

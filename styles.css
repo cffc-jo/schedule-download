@@ -1,20 +1,8 @@
 /* ==========================================================================
-   BRAND COLORS – fill these in with Chicago Fire FC hex codes.
-   The values below are neutral placeholders.
-   Contrast tip: buttons use WHITE text on --cf-primary and --cf-accent, so
-   those two need a contrast ratio of at least 4.5:1 against white (check at
-   webaim.org/resources/contrastchecker). Pure bright red (#FF0000) is only
-   4.0:1 – use a slightly deeper red for buttons.
+   Page styles. Brand colors (--cf-primary, --cf-accent, etc.) are set in
+   colors.css – change colors there, not here.
    ========================================================================== */
 :root {
-  --cf-primary:   #1F3A5F;  /* main buttons, headings          (white text on it) */
-  --cf-secondary: #4A5B6C;  /* small text, outlines                                */
-  --cf-accent:    #8C2F39;  /* "Get tickets" button, selected  (white text on it) */
-  --cf-dark:      #1B1F24;  /* body text, test banner                              */
-  --cf-light:     #F4F5F7;  /* page background                                     */
-
-  /* Usually no need to change these */
-  --white: #FFFFFF;
   --border: #D3D8DE;
   --radius: 10px;
   --tap: 48px;              /* minimum tap target height */
@@ -28,6 +16,7 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  border-top: 6px solid var(--cf-highlight);
   background: var(--cf-light);
   color: var(--cf-dark);
   font-family: var(--font);
@@ -189,7 +178,7 @@ a { color: var(--cf-primary); }
   font-size: 1.1875rem;
   min-height: 60px;
 }
-.btn-primary:hover { filter: brightness(1.12); }
+.btn-primary:hover { background: var(--cf-primary-hover); }
 
 .btn-secondary {
   background: var(--white);

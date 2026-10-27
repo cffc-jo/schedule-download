@@ -15,7 +15,8 @@ submit our Jotform sign-up form.
 | File | What it is | Do you edit it? |
 |---|---|---|
 | `config.js` | All settings: calendar links, test mode, text, tickets link | **Yes – this is the main one** |
-| `styles.css` | Look and feel. Brand colors are at the very top | Colors only |
+| `colors.css` | Brand colors and where each one is used | Colors only |
+| `styles.css` | Layout and look of the page | Rarely |
 | `assets/` | Put the official logo here (`logo.svg` or `logo.png`) | Add files |
 | `index.html` | The page layout | Rarely |
 | `app.js` | The page's logic (device detection, building links) | No |
@@ -139,20 +140,23 @@ subscription from your own devices once you switch over.
 
 ## 4. Change the colors, logo, text, and tickets link
 
-**Colors** – open `styles.css`. The five brand colors are at the very top:
+**Colors** – open `colors.css`. It has two parts:
+
+1. **Brand palette** – the official Chicago Fire FC colors (Fire Red, Red,
+   Navy, Flag Blue, etc.).
+2. **Where each color is used** – for example:
 
 ```css
---cf-primary:   #1F3A5F;  /* main buttons, headings */
---cf-secondary: #4A5B6C;  /* small text, outlines */
---cf-accent:    #8C2F39;  /* "Get tickets" button, selected choice */
---cf-dark:      #1B1F24;  /* body text */
---cf-light:     #F4F5F7;  /* page background */
+--cf-primary: var(--red);   /* main buttons, headings */
+--cf-accent:  var(--navy);  /* "Get tickets" button, selected choice */
 ```
 
-Replace the hex codes with the official ones. Buttons use white text on
-`--cf-primary` and `--cf-accent`, so those need a contrast ratio of at least
-**4.5:1** against white – check at https://webaim.org/resources/contrastchecker/.
-(Pure bright red `#FF0000` is only 4.0:1; use a slightly deeper red for buttons.)
+To restyle the page, change Part 2, e.g. swap `var(--red)` for another brand
+color. Buttons use white text on `--cf-primary` and `--cf-accent`, so those
+need a contrast ratio of at least **4.5:1** against white – check at
+https://webaim.org/resources/contrastchecker/. That's why bright Fire Red
+(`#FF0000`, only 4.0:1) is used just for the thin stripe at the top, and the
+buttons use the deeper Red (`#AA0000`).
 
 **Logo** – upload the official logo file to the `assets` folder named exactly
 `logo.svg` (preferred) or `logo.png`. On GitHub: open the `assets` folder →
