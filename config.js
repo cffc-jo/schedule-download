@@ -15,7 +15,7 @@ window.CF_CONFIG = {
              matches) and shows a "TEST MODE" banner.
      false = the page uses the real calendars you paste in section 2.
      ------------------------------------------------------------------------ */
-  TEST_MODE: true,
+  TEST_MODE: false,
 
   // Sample calendars used while TEST_MODE is true. You don't need to change these.
   TEST_CALENDAR_URLS: {
