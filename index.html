@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add the Chicago Fire FC Schedule to Your Calendar</title>
+  <meta name="description" content="Subscribe to the Chicago Fire FC match schedule in your calendar app.">
+
+  <!-- Keep this page out of search engines (fans arrive here from the sign-up form). -->
+  <meta name="robots" content="noindex">
+  <!-- Don't pass this page's address on to other sites when a fan taps a link. -->
+  <meta name="referrer" content="no-referrer">
+
+  <!-- Favicon placeholder: add assets/favicon.png (a square image, e.g. 512x512). -->
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Link-preview (Open Graph) placeholders: add assets/og-image.png (1200x630).
+       og:image must be a full web address. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chicago Fire FC Match Schedule">
+  <meta property="og:description" content="Add every Chicago Fire FC match to your calendar.">
+  <meta property="og:image" content="https://cffc-jo.github.io/schedule-download/assets/og-image.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Shown only while TEST_MODE is true in config.js -->
+  <div id="test-banner" class="test-banner" hidden>
+    TEST MODE &ndash; sample calendars with fake matches
+  </div>
+
+  <main class="page">
+
+    <!-- Shown only inside apps like Instagram or Facebook -->
+    <section id="inapp-notice" class="inapp-notice" hidden aria-labelledby="inapp-title">
+      <h2 id="inapp-title">First, open this page in your browser</h2>
+      <p id="inapp-steps">Calendar buttons often don&rsquo;t work inside apps like Instagram or Facebook.
+        Tap <strong>&#8943;</strong> (top or bottom corner), then <strong>&ldquo;Open in browser&rdquo;</strong>.</p>
+      <button type="button" class="btn btn-secondary" id="copy-page-btn">Copy page link</button>
+      <p class="hint">Then paste it into Safari or Chrome.</p>
+      <!-- Shown only if automatic copying is blocked -->
+      <label class="visually-hidden" for="page-link">Page link</label>
+      <input id="page-link" class="link-field" type="text" readonly hidden>
+    </section>
+
+    <header class="masthead">
+      <!-- Official logo. If assets/logo.svg is missing, we try logo.png, then show text. -->
+      <p id="logo-text" class="logo-text" hidden>Chicago Fire FC</p>
+      <img id="logo" class="logo" src="assets/logo.svg" alt="Chicago Fire FC"
+           onerror="if (!this.dataset.triedPng) { this.dataset.triedPng = '1'; this.src = 'assets/logo.png'; }
+                    else { this.hidden = true; document.getElementById('logo-text').hidden = false; }">
+
+      <h1 id="greeting">You&rsquo;re in!</h1>
+      <p id="intro" class="intro"></p>
+    </header>
+
+    <noscript>
+      <p class="config-error">Please turn on JavaScript to see the calendar buttons.</p>
+    </noscript>
+
+    <!-- Step 1: which calendar -->
+    <form class="card" onsubmit="return false">
+      <fieldset class="feed-picker">
+        <legend><span class="step-num" aria-hidden="true">1</span> Pick your matches</legend>
+        <div id="feed-options" class="feed-options">
+          <!-- Radio buttons are added here by app.js from config.js -->
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- Step 2: add it -->
+    <section class="card" aria-labelledby="add-title">
+      <h2 id="add-title"><span class="step-num" aria-hidden="true">2</span> Add it to your calendar</h2>
+
+      <p id="config-error" class="config-error" role="alert" hidden></p>
+
+      <!-- The main button(s) for this fan's device are added here by app.js -->
+      <div id="primary-area"></div>
+    </section>
+
+    <!-- Everything else -->
+    <section class="other">
+      <button type="button" class="btn btn-ghost other-toggle" id="other-toggle"
+              aria-expanded="false" aria-controls="other-panel">
+        <span>Other devices / calendars</span>
+        <span class="chevron" aria-hidden="true"></span>
+      </button>
+
+      <div id="other-panel" class="other-panel" hidden>
+        <ul class="option-list">
+          <li>
+            <a class="option" data-method="apple" href="#">
+              <span class="option-title">Apple Calendar</span>
+              <span class="option-sub">iPhone, iPad, or Mac</span>
+            </a>
+          </li>
+          <li>
+            <a class="option" data-method="google" href="#" target="_blank" rel="noopener">
+              <span class="option-title">Google Calendar</span>
+              <span class="option-sub">Android phone or any computer</span>
+            </a>
+          </li>
+          <li>
+            <a class="option" data-method="outlook" href="#" target="_blank" rel="noopener">
+              <span class="option-title">Outlook.com</span>
+              <span class="option-sub">Personal Outlook, Hotmail, or Live account</span>
+            </a>
+          </li>
+          <li>
+            <a class="option" data-method="office" href="#" target="_blank" rel="noopener">
+              <span class="option-title">Outlook for work or school</span>
+              <span class="option-sub">Microsoft 365</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="copy-block">
+          <p class="option-title">Any other calendar app</p>
+          <p class="option-sub">Copy this link, then look for &ldquo;Subscribe&rdquo; or &ldquo;Add calendar from URL&rdquo; in your app.</p>
+          <label class="visually-hidden" for="calendar-link">Calendar link</label>
+          <input id="calendar-link" class="link-field" type="text" readonly>
+          <button type="button" class="btn btn-secondary" id="copy-cal-btn">Copy calendar link</button>
+        </div>
+      </div>
+    </section>
+
+    <a id="tickets-btn" class="btn btn-accent tickets" href="#" target="_blank" rel="noopener" hidden>Get tickets</a>
+
+    <!-- Screen readers announce messages put here (e.g. "Link copied") -->
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

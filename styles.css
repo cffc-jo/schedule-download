@@ -1,0 +1,308 @@
+/* ==========================================================================
+   BRAND COLORS – fill these in with Chicago Fire FC hex codes.
+   The values below are neutral placeholders.
+   Contrast tip: buttons use WHITE text on --cf-primary and --cf-accent, so
+   those two need a contrast ratio of at least 4.5:1 against white (check at
+   webaim.org/resources/contrastchecker). Pure bright red (#FF0000) is only
+   4.0:1 – use a slightly deeper red for buttons.
+   ========================================================================== */
+:root {
+  --cf-primary:   #1F3A5F;  /* main buttons, headings          (white text on it) */
+  --cf-secondary: #4A5B6C;  /* small text, outlines                                */
+  --cf-accent:    #8C2F39;  /* "Get tickets" button, selected  (white text on it) */
+  --cf-dark:      #1B1F24;  /* body text, test banner                              */
+  --cf-light:     #F4F5F7;  /* page background                                     */
+
+  /* Usually no need to change these */
+  --white: #FFFFFF;
+  --border: #D3D8DE;
+  --radius: 10px;
+  --tap: 48px;              /* minimum tap target height */
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--cf-light);
+  color: var(--cf-dark);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+[hidden] { display: none !important; }
+
+.page {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+h1, h2 { line-height: 1.2; margin: 0 0 .5rem; }
+h1 { font-size: 1.875rem; color: var(--cf-primary); }
+h2 { font-size: 1.1875rem; }
+
+a { color: var(--cf-primary); }
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 3px solid var(--cf-dark);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Banners ---------- */
+.test-banner {
+  background: var(--cf-dark);
+  color: var(--white);
+  text-align: center;
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: .4rem 1rem;
+}
+
+.inapp-notice {
+  background: #FFF4D6;
+  border: 2px solid #B7791F;
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+.inapp-notice h2 { font-size: 1.25rem; }
+.inapp-notice p { margin: 0 0 .75rem; }
+
+/* ---------- Header ---------- */
+.masthead { text-align: center; margin: .5rem 0 1.25rem; }
+
+.logo {
+  display: block;
+  width: auto;
+  height: 96px;
+  max-width: 70%;
+  margin: 0 auto 1rem;
+}
+
+.logo-text {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--cf-primary);
+}
+
+.intro { margin: 0; color: var(--cf-dark); }
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.125rem 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 1.75rem; height: 1.75rem;
+  margin-right: .4rem;
+  border-radius: 50%;
+  background: var(--cf-primary);
+  color: var(--white);
+  font-size: .9375rem;
+  vertical-align: 2px;
+}
+
+/* ---------- Step 1: feed picker (radio group) ---------- */
+.feed-picker { border: 0; margin: 0; padding: 0; min-width: 0; }
+.feed-picker legend {
+  padding: 0;
+  margin-bottom: .75rem;
+  font-size: 1.1875rem;
+  font-weight: 700;
+}
+
+.feed-options { display: grid; gap: .5rem; }
+
+.feed-option {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  min-height: var(--tap);
+  padding: .75rem .875rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.feed-option input {
+  flex: none;
+  width: 1.375rem; height: 1.375rem;
+  margin: 0;
+  accent-color: var(--cf-accent);
+}
+.feed-option:has(input:checked) {
+  border-color: var(--cf-accent);
+  background: color-mix(in srgb, var(--cf-accent) 7%, var(--white));
+}
+.feed-option:has(input:focus-visible) {
+  outline: 3px solid var(--cf-dark);
+  outline-offset: 2px;
+}
+.feed-label { font-weight: 700; display: block; }
+.feed-detail { font-size: .9375rem; color: var(--cf-secondary); display: block; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+  min-height: var(--tap);
+  padding: .75rem 1rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--cf-primary);
+  color: var(--white);
+  font-size: 1.1875rem;
+  min-height: 60px;
+}
+.btn-primary:hover { filter: brightness(1.12); }
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--cf-primary);
+  border-color: var(--cf-primary);
+}
+.btn-secondary:hover { background: var(--cf-light); }
+
+.btn-accent {
+  background: var(--cf-accent);
+  color: var(--white);
+}
+.btn-accent:hover { filter: brightness(1.12); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--cf-dark);
+  border-color: var(--border);
+}
+
+.btn-row { display: grid; gap: .75rem; }
+@media (min-width: 30rem) {
+  .btn-row.two { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Steps under the main button ---------- */
+.steps {
+  margin: 1rem 0 0;
+  padding-left: 1.5rem;
+}
+.steps li { margin-bottom: .35rem; }
+.steps li::marker { font-weight: 700; color: var(--cf-primary); }
+
+.hint {
+  font-size: .9375rem;
+  color: var(--cf-secondary);
+  margin: .75rem 0 0;
+}
+
+/* ---------- Other devices ---------- */
+.other { margin-top: 1.5rem; }
+
+.other-toggle { justify-content: space-between; }
+.chevron {
+  width: .6rem; height: .6rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .15s;
+  margin-top: -.25rem;
+}
+.other-toggle[aria-expanded="true"] .chevron { transform: rotate(-135deg); margin-top: .25rem; }
+
+.other-panel { margin-top: .75rem; }
+
+.option-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .5rem;
+}
+
+.option {
+  display: block;
+  min-height: var(--tap);
+  padding: .75rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--cf-dark);
+  text-decoration: none;
+}
+.option:hover { border-color: var(--cf-primary); }
+.option-title { display: block; font-weight: 700; color: var(--cf-primary); margin: 0; }
+.option-sub { display: block; font-size: .9375rem; color: var(--cf-secondary); margin: 0; }
+
+.copy-block {
+  margin-top: .5rem;
+  padding: .75rem 1rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.link-field {
+  width: 100%;
+  min-height: var(--tap);
+  margin: .75rem 0;
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  font-size: .875rem;
+  color: var(--cf-dark);
+  background: var(--cf-light);
+}
+
+/* ---------- Tickets & misc ---------- */
+.tickets { margin-top: 1.5rem; }
+
+.config-error {
+  background: #FDECEC;
+  border: 1px solid #B42318;
+  color: #7A1A12;
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.status {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  text-align: center;
+  font-weight: 700;
+  color: var(--cf-primary);
+}
