@@ -181,7 +181,7 @@ when the page link is shared in a message.
 - Section 4 (**PAGE TEXT**): the small line at the top ("Chicago Fire FC")
   and the main heading ("2026 Schedule"). Update the year each season.
 - Section 2: each calendar's `name` (what it's called in the fan's calendar
-  app), `label` and `detail` (the choice buttons on the page).
+  app) and `label` (the text on the All / Home / Away buttons).
 
 **Tickets button** – in `config.js` section 3, paste a full link:
 
