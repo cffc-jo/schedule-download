@@ -1,0 +1,42 @@
+/* ==========================================================================
+   CHICAGO FIRE FC – FONTS (MLS Tifo)
+   --------------------------------------------------------------------------
+   The font files live in assets/fonts/ and are served from this site
+   (no outside font services). Only the three styles the page uses are
+   loaded, to keep the page fast on phones.
+
+   If a font hasn't loaded yet, the page shows the phone's built-in font
+   first, then swaps (font-display: swap), so text never stays invisible.
+   ========================================================================== */
+
+/* Headings */
+@font-face {
+  font-family: "MLS Tifo Headline";
+  src: url("assets/fonts/mls-tifo-headline-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Body text */
+@font-face {
+  font-family: "MLS Tifo Standard";
+  src: url("assets/fonts/mls-tifo-standard-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Buttons, labels, anything bold */
+@font-face {
+  font-family: "MLS Tifo Standard";
+  src: url("assets/fonts/mls-tifo-standard-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font: "MLS Tifo Standard", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-headline: "MLS Tifo Headline", "MLS Tifo Standard", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}

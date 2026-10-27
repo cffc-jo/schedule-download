@@ -16,6 +16,7 @@ submit our Jotform sign-up form.
 |---|---|---|
 | `config.js` | All settings: calendar links, test mode, text, tickets link | **Yes – this is the main one** |
 | `colors.css` | Brand colors and where each one is used | Colors only |
+| `fonts.css` | MLS Tifo font setup (files in `assets/fonts/`) | Rarely |
 | `styles.css` | Layout and look of the page | Rarely |
 | `assets/` | Official logo (`logo.png`) and browser icon (`favicon.png`) | Only to replace them |
 | `index.html` | The page layout | Rarely |
@@ -166,6 +167,13 @@ ever missing, the page tries `logo.svg`, then shows the text
 
 **Favicon** – the browser-tab and home-screen icon is `assets/favicon.png`
 (the crest at 192×192).
+
+**Fonts** – the page uses MLS Tifo, served from `assets/fonts/` (WOFF2, a
+compact web format). Only three styles are loaded to keep it fast: Tifo
+Headline Bold (headings), Tifo Standard Regular (body text) and Tifo Standard
+Bold (buttons and labels). They're set up in `fonts.css`. To add another
+style (e.g. Medium), convert the `.otf` to `.woff2`, put it in
+`assets/fonts/`, and copy one of the `@font-face` blocks in `fonts.css`.
 
 **Link preview** (optional) – add `assets/og-image.png` (1200×630), shown
 when the page link is shared in a message.
