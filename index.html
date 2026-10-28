@@ -49,8 +49,8 @@
       <!-- Shown only if automatic copying is blocked -->
       <label class="visually-hidden" for="page-link">Page link</label>
       <input id="page-link" class="link-field" type="text" readonly hidden>
-      <!-- "Link copied" message (also read out by screen readers) -->
-      <p id="page-copy-status" class="status" role="status" aria-live="polite"></p>
+      <!-- Not shown on screen; tells screen-reader users the link was copied -->
+      <p id="page-copy-status" class="visually-hidden" role="status" aria-live="polite"></p>
     </section>
 
     <header class="masthead">
@@ -129,8 +129,8 @@
           <label class="visually-hidden" for="calendar-link">Calendar link</label>
           <input id="calendar-link" class="link-field" type="text" readonly>
           <button type="button" class="btn btn-secondary" id="copy-cal-btn">Copy Calendar Feed Link</button>
-          <!-- "Link copied" message (also read out by screen readers) -->
-          <p id="cal-copy-status" class="status" role="status" aria-live="polite"></p>
+          <!-- Not shown on screen; tells screen-reader users the link was copied -->
+          <p id="cal-copy-status" class="visually-hidden" role="status" aria-live="polite"></p>
         </div>
       </div>
     </section>

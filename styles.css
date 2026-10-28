@@ -208,11 +208,11 @@ a { color: var(--cf-primary); }
 /* ---------- Steps under the main button ---------- */
 .steps {
   margin: 1rem 0 0;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
+  font-size: .875rem;  /* 14px */
 }
 .steps li { margin-bottom: .35rem; }
-/* Step numbers: 1.2em bold counts as "large text", so blue only needs 3:1 contrast */
-.steps li::marker { font-weight: 700; font-size: 1.2em; color: var(--cf-step-number); }
+.steps li::marker { font-weight: 700; color: var(--cf-step-number); }
 
 .hint {
   font-size: .6875rem;  /* 11px */
@@ -257,7 +257,7 @@ a { color: var(--cf-primary); }
 }
 .option:hover { border-color: var(--cf-primary); }
 .option-title { display: block; font-weight: 700; color: var(--cf-primary); margin: 0; }
-.option-sub { display: block; font-size: .9375rem; color: var(--cf-secondary); margin: 0; }
+.option-sub { display: block; font-size: .6875rem; line-height: 1.45; color: var(--cf-secondary); margin: 0; }  /* 11px, same as .hint */
 
 .copy-block {
   margin-top: .5rem;
@@ -289,13 +289,4 @@ a { color: var(--cf-primary); }
   border-radius: var(--radius);
   padding: .75rem 1rem;
   margin: 0 0 1rem;
-}
-
-/* "Link copied" message under each copy button */
-.status {
-  min-height: 1.5rem;
-  margin: .5rem 0 0;
-  text-align: center;
-  font-weight: 700;
-  color: var(--cf-primary);
 }

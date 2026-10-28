@@ -154,14 +154,18 @@
 
   // Copy text to the clipboard, with an older fallback for some browsers.
   // If copying is blocked, the link is shown in `field` so it can be copied by hand.
-  // `status` is where the "Link copied" message appears.
+  // The button briefly says "Copied!". `status` is a hidden spot that tells
+  // screen-reader users the same thing.
   function copyText(text, button, field, status) {
     function done(ok) {
       var original = button.dataset.label || button.textContent;
       button.dataset.label = original;
       button.textContent = ok ? 'Copied!' : 'Copy the link below';
       announce(status, ok ? 'Link copied' : 'Could not copy automatically. Press and hold the link to copy it.');
-      setTimeout(function () { button.textContent = original; }, 2500);
+      setTimeout(function () {
+        button.textContent = original;
+        status.textContent = '';
+      }, 2500);
       if (!ok) {
         field.value = text;
         field.hidden = false;
