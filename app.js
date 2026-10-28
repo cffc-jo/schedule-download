@@ -241,7 +241,7 @@
 
     if (device.os === 'ios' || device.os === 'mac') {
       var tap = device.os === 'mac' ? 'Click' : 'Tap';
-      area.appendChild(linkButton('Add to my calendar', 'apple', 'btn-primary'));
+      area.appendChild(linkButton('Add to Calendar', 'apple', 'btn-primary'));
       area.appendChild(stepsList([
         tap + ' the button above',
         tap + ' “Subscribe”',
@@ -250,7 +250,7 @@
       area.appendChild(el('p', { className: 'hint', text: 'This adds it to Apple Calendar. Use Google or Outlook instead? See “Other Devices and Calendars” below.' }));
 
     } else if (device.os === 'android') {
-      area.appendChild(linkButton('Add to my calendar', 'google', 'btn-primary'));
+      area.appendChild(linkButton('Add to Calendar', 'google', 'btn-primary'));
       area.appendChild(stepsList([
         'Tap the button above',
         'Tap “Add” (sign in to Google if it asks)',

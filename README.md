@@ -217,12 +217,12 @@ so the redirect is tested too. For each one, confirm the TEST matches appear
 in the calendar app (November and early December 2026, titled
 "TEST – …").
 
-- [ ] **iPhone, Safari:** "Add to my calendar" → Subscribe → Done. Matches
+- [ ] **iPhone, Safari:** "Add to Calendar" → Subscribe → Done. Matches
       appear in the Calendar app.
-- [ ] **Android, Chrome:** "Add to my calendar" → Add. Matches appear at
+- [ ] **Android, Chrome:** "Add to Calendar" → Add. Matches appear at
       calendar.google.com right away. If they're missing from the phone's
       Calendar app: Calendar app → Settings → tap the calendar → turn on Sync.
-- [ ] **Mac, Safari or Chrome:** "Add to my calendar" opens Apple Calendar →
+- [ ] **Mac, Safari or Chrome:** "Add to Calendar" opens Apple Calendar →
       Subscribe.
 - [ ] **Windows – Outlook:** click Outlook → sign in → Import/Add.
 - [ ] **Windows – Google Calendar:** click Google Calendar → Add.
