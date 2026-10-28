@@ -200,6 +200,15 @@ a { color: var(--cf-primary); }
   border-color: var(--border);
 }
 
+/* Smaller, centered button that's only as wide as its text (e.g. Copy Calendar Feed Link) */
+.btn-compact {
+  width: auto;
+  min-width: 50%;
+  margin: 0 auto;
+  padding: .5rem 1.25rem;
+  font-size: .875rem;  /* 14px */
+}
+
 .btn-row { display: grid; gap: .75rem; }
 @media (min-width: 30rem) {
   .btn-row.two { grid-template-columns: 1fr 1fr; }
