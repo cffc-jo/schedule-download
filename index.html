@@ -49,6 +49,8 @@
       <!-- Shown only if automatic copying is blocked -->
       <label class="visually-hidden" for="page-link">Page link</label>
       <input id="page-link" class="link-field" type="text" readonly hidden>
+      <!-- "Link copied" message (also read out by screen readers) -->
+      <p id="page-copy-status" class="status" role="status" aria-live="polite"></p>
     </section>
 
     <header class="masthead">
@@ -104,37 +106,37 @@
           <li>
             <a class="option" data-method="google" href="#" target="_blank" rel="noopener">
               <span class="option-title">Google Calendar</span>
-              <span class="option-sub">Android phone or any computer</span>
+              <span class="option-sub">Android phones or any computer</span>
             </a>
           </li>
           <li>
             <a class="option" data-method="outlook" href="#" target="_blank" rel="noopener">
-              <span class="option-title">Outlook.com</span>
+              <span class="option-title">Outlook.com (Personal)</span>
               <span class="option-sub">Personal Outlook, Hotmail, or Live account</span>
             </a>
           </li>
           <li>
             <a class="option" data-method="office" href="#" target="_blank" rel="noopener">
-              <span class="option-title">Outlook for work or school</span>
+              <span class="option-title">Outlook (for Work or School)</span>
               <span class="option-sub">Microsoft 365</span>
             </a>
           </li>
         </ul>
 
         <div class="copy-block">
-          <p class="option-title">Any other calendar app</p>
-          <p class="option-sub">Copy this link, then look for &ldquo;Subscribe&rdquo; or &ldquo;Add calendar from URL&rdquo; in your app.</p>
+          <p class="option-title">Any Other Calendar Apps</p>
+          <p class="option-sub">Copy this link, then look for &ldquo;subscribe&rdquo; or &ldquo;add calendar from URL&rdquo; in your app</p>
           <label class="visually-hidden" for="calendar-link">Calendar link</label>
           <input id="calendar-link" class="link-field" type="text" readonly>
-          <button type="button" class="btn btn-secondary" id="copy-cal-btn">Copy calendar link</button>
+          <button type="button" class="btn btn-secondary" id="copy-cal-btn">Copy Calendar Feed Link</button>
+          <!-- "Link copied" message (also read out by screen readers) -->
+          <p id="cal-copy-status" class="status" role="status" aria-live="polite"></p>
         </div>
       </div>
     </section>
 
     <a id="tickets-btn" class="btn btn-accent tickets" href="#" target="_blank" rel="noopener" hidden>Get tickets</a>
 
-    <!-- Screen readers announce messages put here (e.g. "Link copied") -->
-    <p id="status" class="status" role="status" aria-live="polite"></p>
   </main>
 
   <script src="config.js"></script>

@@ -146,8 +146,7 @@
     } catch (e) { /* never let analytics break the page */ }
   }
 
-  function announce(message) {
-    var status = $('status');
+  function announce(status, message) {
     status.textContent = '';
     // Small delay so screen readers notice repeat messages.
     setTimeout(function () { status.textContent = message; }, 50);
@@ -155,12 +154,13 @@
 
   // Copy text to the clipboard, with an older fallback for some browsers.
   // If copying is blocked, the link is shown in `field` so it can be copied by hand.
-  function copyText(text, button, field) {
+  // `status` is where the "Link copied" message appears.
+  function copyText(text, button, field, status) {
     function done(ok) {
       var original = button.dataset.label || button.textContent;
       button.dataset.label = original;
       button.textContent = ok ? 'Copied!' : 'Copy the link below';
-      announce(ok ? 'Link copied.' : 'Could not copy automatically. Press and hold the link to copy it.');
+      announce(status, ok ? 'Link copied' : 'Could not copy automatically. Press and hold the link to copy it.');
       setTimeout(function () { button.textContent = original; }, 2500);
       if (!ok) {
         field.value = text;
@@ -262,7 +262,7 @@
         'Select your preferred calendar',
         'Sign in if asked, then click “Add” or “Import”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Choose it under “Other Devices and Calendars” below.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Select it under “Other Devices and Calendars” below.' }));
 
     } else {
       // Unknown device: show every option straight away.
@@ -315,7 +315,7 @@
     });
 
     $('copy-cal-btn').addEventListener('click', function () {
-      copyText($('calendar-link').value, this, $('calendar-link'));
+      copyText($('calendar-link').value, this, $('calendar-link'), $('cal-copy-status'));
       track('copy_calendar_link');
     });
 
@@ -328,7 +328,7 @@
       url.search = '';
       url.hash = '';
       url.searchParams.set('feed', selectedFeed);
-      copyText(url.toString(), this, $('page-link'));
+      copyText(url.toString(), this, $('page-link'), $('page-copy-status'));
       track('copy_page_link');
     });
   }

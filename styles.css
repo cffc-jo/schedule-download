@@ -37,7 +37,7 @@ h1, h2, .preheader {
   font-weight: 700;
 }
 h1, h2 { line-height: 1.2; margin: 0 0 .5rem; }
-h1 { font-size: 2.25rem; color: var(--cf-primary); margin: 0; }
+h1 { font-size: 2.25rem; color: var(--cf-primary); margin: 0; text-transform: uppercase; }
 h2 { font-size: 1.1875rem; }
 
 a { color: var(--cf-primary); }
@@ -215,7 +215,8 @@ a { color: var(--cf-primary); }
 .steps li::marker { font-weight: 700; font-size: 1.2em; color: var(--cf-step-number); }
 
 .hint {
-  font-size: .9375rem;
+  font-size: .6875rem;  /* 11px */
+  line-height: 1.45;
   color: var(--cf-secondary);
   margin: .75rem 0 0;
 }
@@ -290,9 +291,10 @@ a { color: var(--cf-primary); }
   margin: 0 0 1rem;
 }
 
+/* "Link copied" message under each copy button */
 .status {
   min-height: 1.5rem;
-  margin: 1rem 0 0;
+  margin: .5rem 0 0;
   text-align: center;
   font-weight: 700;
   color: var(--cf-primary);
