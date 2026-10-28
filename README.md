@@ -222,8 +222,8 @@ in the calendar app (November and early December 2026, titled
 - [ ] **Android, Chrome:** "Add to Calendar" → Add. Matches appear at
       calendar.google.com right away. If they're missing from the phone's
       Calendar app: Calendar app → Settings → tap the calendar → turn on Sync.
-- [ ] **Mac, Safari or Chrome:** "Add to Calendar" opens Apple Calendar →
-      Subscribe.
+- [ ] **Mac, Safari or Chrome:** "Apple Calendar" opens the Calendar app →
+      Subscribe → OK. "Outlook" opens Outlook.com → sign in → Add/Import.
 - [ ] **Windows – Outlook:** click Outlook → sign in → Import/Add.
 - [ ] **Windows – Google Calendar:** click Google Calendar → Add.
 - [ ] **Work Outlook:** "Other Devices and Calendars" → Outlook for work or school.

@@ -239,15 +239,26 @@
   function renderPrimary() {
     var area = $('primary-area');
 
-    if (device.os === 'ios' || device.os === 'mac') {
-      var tap = device.os === 'mac' ? 'Click' : 'Tap';
+    if (device.os === 'ios') {
       area.appendChild(linkButton('Add to Calendar', 'apple', 'btn-primary'));
       area.appendChild(stepsList([
-        tap + ' the button above',
-        tap + ' “Subscribe”',
-        tap + ' “Done”',
+        'Tap the button above',
+        'Tap “Subscribe”',
+        'Tap “Done”',
       ]));
       area.appendChild(el('p', { className: 'hint', text: 'This adds it to Apple Calendar. Use Google or Outlook instead? See “Other Devices and Calendars” below.' }));
+
+    } else if (device.os === 'mac') {
+      area.appendChild(el('div', { className: 'btn-row two' }, [
+        linkButton('Apple Calendar', 'apple', 'btn-primary'),
+        linkButton('Outlook', 'outlook', 'btn-primary'),
+      ]));
+      area.appendChild(stepsList([
+        'Select your preferred calendar',
+        'Apple Calendar: click “Subscribe,” then “OK”',
+        'Outlook: sign in if asked, then click “Add” or “Import”',
+      ]));
+      area.appendChild(el('p', { className: 'hint', text: 'Using Google Calendar or Outlook for work or school? Select it under “Other Devices and Calendars” below.' }));
 
     } else if (device.os === 'android') {
       area.appendChild(linkButton('Add to Calendar', 'google', 'btn-primary'));
