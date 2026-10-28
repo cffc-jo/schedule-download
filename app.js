@@ -34,16 +34,7 @@
   var selectedFeed = cleanFeed(params.get('feed'));
   var forcedDevice = (params.get('device') || '').toLowerCase();
 
-  // Remove feed from the address bar so shared links start clean. Older
-  // redirect links may still add ?name=, so that is removed too (it's never
-  // shown). ?device= is kept so previews survive a refresh.
-  if (params.has('name') || params.has('feed')) {
-    params.delete('name');
-    params.delete('feed');
-    var query = params.toString();
-    var cleanUrl = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
-    try { window.history.replaceState(null, '', cleanUrl); } catch (e) { /* ignore */ }
-  }
+  // The address bar is tidied up after device detection – see section 2.
 
 
   /* ------------------------------------------------------------------------
@@ -81,6 +72,20 @@
   }
 
   var device = detectDevice();
+
+  // Tidy the address bar so shared links start clean. Older redirect links may
+  // still add ?name=, so that is always removed (it's never shown).
+  // ?feed= is removed too – EXCEPT inside apps like Instagram, where "Open in
+  // Browser" reuses this address, so keeping it opens the fan's chosen calendar.
+  // ?device= is kept so previews survive a refresh.
+  var removeFeed = !device.inApp;
+  if (params.has('name') || (removeFeed && params.has('feed'))) {
+    params.delete('name');
+    if (removeFeed) params.delete('feed');
+    var query = params.toString();
+    var cleanUrl = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
+    try { window.history.replaceState(null, '', cleanUrl); } catch (e) { /* ignore */ }
+  }
 
 
   /* ------------------------------------------------------------------------
