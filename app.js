@@ -251,7 +251,7 @@
         'Tap “Subscribe”',
         'Tap “Done”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'This adds it to Apple Calendar. Use Google or Outlook instead? See “Other Devices and Calendars” below.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'This adds it to Apple Calendar. Use Google or Outlook instead? See “Other Devices and Calendars” below' }));
 
     } else if (device.os === 'mac') {
       area.appendChild(el('div', { className: 'btn-row two' }, [
@@ -260,10 +260,10 @@
       ]));
       area.appendChild(stepsList([
         'Select your preferred calendar',
-        'Apple Calendar: click “Subscribe,” then “OK”',
-        'Outlook: sign in if asked, then click “Add” or “Import”',
+        'Apple Calendar: Click “Subscribe,” then “OK”',
+        'Outlook: Sign in if asked, then click “Add” or “Import”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Using Google Calendar or Outlook for work or school? Select it under “Other Devices and Calendars” below.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Using Google Calendar or Outlook for work or school? Select it under “Other Devices and Calendars” below' }));
 
     } else if (device.os === 'android') {
       area.appendChild(linkButton('Add to Calendar', 'google', 'btn-primary'));
@@ -271,7 +271,7 @@
         'Tap the button above',
         'Tap “Add” (sign in to Google if it asks)',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Not showing up? Open your calendar app’s settings, select the Chicago Fire calendar, and turn on Sync.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Not showing up? Open your calendar app’s settings, select the Chicago Fire calendar, and turn on Sync' }));
 
     } else if (device.os === 'windows') {
       area.appendChild(el('div', { className: 'btn-row two' }, [
@@ -282,12 +282,14 @@
         'Select your preferred calendar',
         'Sign in if asked, then click “Add” or “Import”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Select it under “Other Devices and Calendars” below.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Select it under “Other Devices and Calendars” below' }));
 
     } else {
-      // Unknown device: show every option straight away.
-      area.appendChild(el('p', { className: 'intro', text: 'Choose the calendar app you use below.' }));
+      // Unknown device: show every option straight away, without the
+      // "Other Devices and Calendars" toggle above them.
+      area.appendChild(el('p', { className: 'intro-small', text: 'Select your preferred calendar app below' }));
       setOtherOpen(true);
+      $('other-toggle').hidden = true;
     }
   }
 

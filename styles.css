@@ -106,7 +106,8 @@ a { color: var(--cf-primary); }
   color: var(--cf-dark);
 }
 
-.intro { margin: 0; color: var(--cf-dark); }
+/* Line shown on unknown devices instead of a main button (same size as the steps) */
+.intro-small { margin: 0; font-size: .875rem; color: var(--cf-dark); }
 
 /* ---------- Cards ---------- */
 .card {
@@ -242,6 +243,7 @@ a { color: var(--cf-primary); }
 
 /* ---------- Other devices ---------- */
 .other { margin-top: 1.5rem; }
+.other:has(.other-toggle[hidden]) { margin-top: 0; }  /* unknown devices: list follows the card directly */
 
 .other-toggle { justify-content: space-between; }
 .chevron {
@@ -255,6 +257,7 @@ a { color: var(--cf-primary); }
 .other-toggle[aria-expanded="true"] .chevron { transform: rotate(-135deg); margin-top: .25rem; }
 
 .other-panel { margin-top: .75rem; }
+.other-toggle[hidden] + .other-panel { margin-top: 0; }  /* unknown devices: no toggle, list sits directly on the page */
 
 .option-list {
   list-style: none;
