@@ -107,7 +107,7 @@ a { color: var(--cf-primary); }
 }
 
 /* Line shown on unknown devices instead of a main button (same size as the steps) */
-.intro-small { margin: 0; font-size: .875rem; color: var(--cf-dark); }
+.intro-small { margin: 0; font-size: .875rem; color: var(--cf-dark); text-align: center; }
 
 /* ---------- Cards ---------- */
 .card {
