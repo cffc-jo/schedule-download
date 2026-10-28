@@ -68,6 +68,15 @@ a { color: var(--cf-primary); }
 }
 
 /* ---------- In-app page (Instagram, Facebook, etc.) ---------- */
+/* Fill the screen (minus the top stripe and page padding) and center the content vertically */
+.inapp-page:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 6px - 4.25rem);
+  min-height: calc(100svh - 6px - 4.25rem);  /* svh = visible screen height on phones */
+}
+.inapp-page .logo { margin-bottom: 1.75rem; }
 .inapp-card { text-align: center; }
 .inapp-card p { margin: 0; }
 .inapp-card #inapp-steps { margin-bottom: 1.25rem; }
