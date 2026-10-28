@@ -228,10 +228,11 @@
   }
 
   // A big link button. href is filled in by updateLinks().
-  function linkButton(text, method, className) {
-    var attrs = { className: 'btn ' + className, href: '#', 'data-method': method };
+  // `sub` (optional) adds a smaller second line under the label.
+  function linkButton(text, method, className, sub) {
+    var attrs = { className: 'btn ' + className + (sub ? ' btn-stack' : ''), href: '#', 'data-method': method };
     if (method !== 'apple') { attrs.target = '_blank'; attrs.rel = 'noopener'; }
-    return el('a', attrs, [text]);
+    return el('a', attrs, sub ? [el('span', { text: text }), el('span', { className: 'btn-sub', text: sub })] : [text]);
   }
 
   function stepsList(items) {
@@ -256,14 +257,14 @@
     } else if (device.os === 'mac') {
       area.appendChild(el('div', { className: 'btn-row two' }, [
         linkButton('Apple Calendar', 'apple', 'btn-primary'),
-        linkButton('Outlook', 'outlook', 'btn-primary'),
+        linkButton('Outlook', 'office', 'btn-primary', 'For Work or School'),
       ]));
       area.appendChild(stepsList([
         'Select your preferred calendar',
         'Apple Calendar: Click “Subscribe,” then “OK”',
         'Outlook: Sign in if asked, then click “Add” or “Import”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Using Google Calendar or Outlook for work or school? Select it under “Other Devices and Calendars” below' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Using Google Calendar or a personal Outlook account? Select it under “Other Devices and Calendars” below' }));
 
     } else if (device.os === 'android') {
       area.appendChild(linkButton('Add to Calendar', 'google', 'btn-primary'));
@@ -275,14 +276,14 @@
 
     } else if (device.os === 'windows') {
       area.appendChild(el('div', { className: 'btn-row two' }, [
-        linkButton('Outlook', 'outlook', 'btn-primary'),
+        linkButton('Outlook', 'office', 'btn-primary', 'For Work or School'),
         linkButton('Google Calendar', 'google', 'btn-primary'),
       ]));
       area.appendChild(stepsList([
         'Select your preferred calendar',
         'Sign in if asked, then click “Add” or “Import”',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Using Outlook for work or school? Select it under “Other Devices and Calendars” below' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Using a personal Outlook account? Select it under “Other Devices and Calendars” below' }));
 
     } else {
       // Unknown device: show every option straight away, without the

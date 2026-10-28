@@ -220,6 +220,10 @@ a { color: var(--cf-primary); }
   font-size: .875rem;  /* 14px */
 }
 
+/* Button with a smaller second line (e.g. Outlook / For Work or School) */
+.btn-stack { flex-direction: column; gap: 0; line-height: 1.2; }
+.btn-sub { font-size: .6875rem; }  /* 11px */
+
 .btn-row { display: grid; gap: .75rem; }
 @media (min-width: 30rem) {
   .btn-row.two { grid-template-columns: 1fr 1fr; }
