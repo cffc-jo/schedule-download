@@ -39,19 +39,32 @@
 
   <main class="page">
 
-    <!-- Shown only inside apps like Instagram or Facebook -->
-    <section id="inapp-notice" class="inapp-notice" hidden aria-labelledby="inapp-title">
-      <h2 id="inapp-title">First, open this page in your browser</h2>
-      <p id="inapp-steps">Calendar buttons often don&rsquo;t work inside apps like Instagram or Facebook.
-        Tap <strong>&#8943;</strong> (top or bottom corner), then <strong>&ldquo;Open in browser&rdquo;</strong>.</p>
-      <button type="button" class="btn btn-secondary" id="copy-page-btn">Copy page link</button>
-      <p class="hint">Then paste it into Safari or Chrome.</p>
-      <!-- Shown only if automatic copying is blocked -->
-      <label class="visually-hidden" for="page-link">Page link</label>
-      <input id="page-link" class="link-field" type="text" readonly hidden>
-      <!-- Not shown on screen; tells screen-reader users the link was copied -->
-      <p id="page-copy-status" class="visually-hidden" role="status" aria-live="polite"></p>
+    <!-- IN-APP PAGE: shown INSTEAD of the schedule page inside apps like
+         Instagram or Facebook, where calendar buttons often don't work. -->
+    <section id="inapp-page" class="inapp-page" hidden>
+      <header class="masthead">
+        <img class="logo" src="assets/logo.png" alt="Chicago Fire FC" width="96" height="96"
+             onerror="this.hidden = true;">
+        <p class="preheader">Chicago Fire FC</p>
+        <h1>Open this page in your browser</h1>
+      </header>
+
+      <div class="card inapp-card">
+        <!-- app.js swaps in the right "three dots" symbol for iPhone or Android -->
+        <p id="inapp-steps">For the best experience, open this page in your browser by tapping the
+          &#8943; in the top or bottom corner of your screen and clicking &ldquo;Open in Browser&rdquo;</p>
+        <button type="button" class="btn btn-primary" id="copy-page-btn">Copy Page Link</button>
+        <p class="inapp-hint">Then paste it into Safari, Chrome or your preferred browser</p>
+        <!-- Shown only if automatic copying is blocked -->
+        <label class="visually-hidden" for="page-link">Page link</label>
+        <input id="page-link" class="link-field" type="text" readonly hidden>
+        <!-- Not shown on screen; tells screen-reader users the link was copied -->
+        <p id="page-copy-status" class="visually-hidden" role="status" aria-live="polite"></p>
+      </div>
     </section>
+
+    <!-- SCHEDULE PAGE: everything a fan sees in a normal browser -->
+    <div id="schedule-page">
 
     <header class="masthead">
       <!-- Official logo. If assets/logo.png is missing, we try logo.svg, then hide it
@@ -136,6 +149,8 @@
     </section>
 
     <a id="tickets-btn" class="btn btn-accent tickets" href="#" target="_blank" rel="noopener" hidden>Get tickets</a>
+
+    </div><!-- /schedule-page -->
 
   </main>
 

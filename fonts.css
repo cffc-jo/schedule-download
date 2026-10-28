@@ -2,7 +2,7 @@
    CHICAGO FIRE FC – FONTS (MLS Tifo)
    --------------------------------------------------------------------------
    The font files live in assets/fonts/ and are served from this site
-   (no outside font services). Only the three styles the page uses are
+   (no outside font services). Only the styles the page uses are
    loaded, to keep the page fast on phones.
 
    If a font hasn't loaded yet, the page shows the phone's built-in font
@@ -24,6 +24,15 @@
   src: url("assets/fonts/mls-tifo-standard-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+/* Italic info line on the in-app page (only downloaded when it's shown) */
+@font-face {
+  font-family: "MLS Tifo Standard";
+  src: url("assets/fonts/mls-tifo-standard-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
   font-display: swap;
 }
 

@@ -67,15 +67,16 @@ a { color: var(--cf-primary); }
   padding: .4rem 1rem;
 }
 
-.inapp-notice {
-  background: #FFF4D6;
-  border: 2px solid #B7791F;
-  border-radius: var(--radius);
-  padding: 1rem;
-  margin-bottom: 1.25rem;
+/* ---------- In-app page (Instagram, Facebook, etc.) ---------- */
+.inapp-card { text-align: center; }
+.inapp-card p { margin: 0; }
+.inapp-card #inapp-steps { margin-bottom: 1.25rem; }
+.inapp-card .inapp-hint {
+  margin-top: 1.25rem;
+  font-size: .6875rem;  /* 11px, same as other info text */
+  font-style: italic;
+  color: var(--cf-secondary);
 }
-.inapp-notice h2 { font-size: 1.25rem; }
-.inapp-notice p { margin: 0 0 .75rem; }
 
 /* ---------- Header ---------- */
 .masthead { text-align: center; margin: .5rem 0 1.25rem; }

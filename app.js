@@ -351,13 +351,14 @@
   function renderExtras() {
     $('test-banner').hidden = !CONFIG.TEST_MODE;
 
+    // Inside apps like Instagram, show only the "open in your browser" page.
     if (device.inApp) {
-      $('inapp-notice').hidden = false;
-      if (device.os === 'ios') {
-        $('inapp-steps').textContent = 'Calendar buttons often don’t work inside apps like Instagram or Facebook. Tap ⋯ (top or bottom corner), then “Open in Safari” or “Open in browser.”';
-      } else if (device.os === 'android') {
-        $('inapp-steps').textContent = 'Calendar buttons often don’t work inside apps like Instagram or Facebook. Tap ⋮ (top corner), then “Open in Chrome” or “Open in browser.”';
-      }
+      $('inapp-page').hidden = false;
+      $('schedule-page').hidden = true;
+      // Android apps use vertical dots (⋮); iPhone apps use horizontal dots (⋯).
+      var dots = device.os === 'android' ? '⋮' : '⋯';
+      $('inapp-steps').textContent = 'For the best experience, open this page in your browser by tapping the ' + dots +
+        ' in the top or bottom corner of your screen and clicking “Open in Browser”';
     }
 
     var tickets = $('tickets-btn');

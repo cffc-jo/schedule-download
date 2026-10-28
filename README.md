@@ -228,8 +228,8 @@ in the calendar app (November and early December 2026, titled
 - [ ] **Windows – Google Calendar:** click Google Calendar → Add.
 - [ ] **Work Outlook:** "Other Devices and Calendars" → Outlook for work or school.
 - [ ] **Instagram in-app browser:** DM yourself the form link and open it
-      inside Instagram. The yellow "open this page in your browser" box
-      appears at the top. "Copy page link" works.
+      inside Instagram. Instead of the schedule, you see only the "Open this
+      page in your browser" page. "Copy Page Link" works.
 - [ ] **"Copy calendar link":** paste the copied link somewhere – it should be
       the `.ics` address.
 - [ ] **Feed values:** submit once with each answer (All / Home / Away) and
