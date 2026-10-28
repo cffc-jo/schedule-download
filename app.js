@@ -243,19 +243,19 @@
       var tap = device.os === 'mac' ? 'Click' : 'Tap';
       area.appendChild(linkButton('Add to my calendar', 'apple', 'btn-primary'));
       area.appendChild(stepsList([
-        tap + ' the button above.',
-        tap + ' “Subscribe.”',
-        tap + ' “Done.”',
+        tap + ' the button above',
+        tap + ' “Subscribe”',
+        tap + ' “Done”',
       ]));
       area.appendChild(el('p', { className: 'hint', text: 'This adds it to Apple Calendar. Use Google or Outlook instead? See “Other Devices and Calendars” below.' }));
 
     } else if (device.os === 'android') {
       area.appendChild(linkButton('Add to my calendar', 'google', 'btn-primary'));
       area.appendChild(stepsList([
-        'Tap the button above.',
-        'Tap “Add.” (Sign in to Google if it asks.)',
+        'Tap the button above',
+        'Tap “Add” (sign in to Google if it asks)',
       ]));
-      area.appendChild(el('p', { className: 'hint', text: 'Matches not showing in your Calendar app? Open the Calendar app’s Settings, tap the Chicago Fire FC calendar, and turn on Sync.' }));
+      area.appendChild(el('p', { className: 'hint', text: 'Not showing up? Open your calendar app’s settings, select the Chicago Fire calendar, and turn on Sync.' }));
 
     } else if (device.os === 'windows') {
       area.appendChild(el('div', { className: 'btn-row two' }, [
