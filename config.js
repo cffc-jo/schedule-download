@@ -36,17 +36,17 @@ window.CF_CONFIG = {
      ------------------------------------------------------------------------ */
   CALENDARS: {
     all: {
-      icalUrl: 'https://calendar.google.com/calendar/ical/c45f999fe76e7be2ffc7ef3ef13aed9a0ee5bd938dfe62ab8c3cc915cae1cbaf%40group.calendar.google.com/public/basic.ics',
+      icalUrl: 'https://calendar.google.com/calendar/ical/16de724f01ddf9927b3b8200318361a557a9dc8593e1bce8d0b1a2c8d2155977%40group.calendar.google.com/public/basic.ics',
       name:    'Chicago Fire FC – All Matches',
       label:   'All',
     },
     home: {
-      icalUrl: 'https://calendar.google.com/calendar/ical/96ec7f6ad0f8984fe53d34f0ded0fde5358e7f71a14800a762277469e91b48ca%40group.calendar.google.com/public/basic.ics',
+      icalUrl: 'https://calendar.google.com/calendar/ical/e887ca276780d2826b37e116d840fd0a767e0cf593bf01101e3d94ca58930eb8%40group.calendar.google.com/public/basic.ics',
       name:    'Chicago Fire FC – Home Matches',
       label:   'Home',
     },
     away: {
-      icalUrl: 'https://calendar.google.com/calendar/ical/86e232d562be0b2b582d0e3980dd9875a31095a9c7c2e5e6c9c57d0966644ae5%40group.calendar.google.com/public/basic.ics',
+      icalUrl: 'https://calendar.google.com/calendar/ical/7eb2d4771f8bee6c72947bc701f074e3a2c4cb89c2ad36ee2695c0eb906bc128%40group.calendar.google.com/public/basic.ics',
       name:    'Chicago Fire FC – Away Matches',
       label:   'Away',
     },
