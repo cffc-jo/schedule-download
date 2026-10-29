@@ -37,17 +37,17 @@ window.CF_CONFIG = {
   CALENDARS: {
     all: {
       icalUrl: 'https://calendar.google.com/calendar/ical/16de724f01ddf9927b3b8200318361a557a9dc8593e1bce8d0b1a2c8d2155977%40group.calendar.google.com/public/basic.ics',
-      name:    'Chicago Fire FC – All Matches',
+      name:    'Chicago Fire FC | 2027 Sprint Season [All Matches]',
       label:   'All',
     },
     home: {
       icalUrl: 'https://calendar.google.com/calendar/ical/e887ca276780d2826b37e116d840fd0a767e0cf593bf01101e3d94ca58930eb8%40group.calendar.google.com/public/basic.ics',
-      name:    'Chicago Fire FC – Home Matches',
+      name:    'Chicago Fire FC | 2027 Sprint Season [Home Matches]',
       label:   'Home',
     },
     away: {
       icalUrl: 'https://calendar.google.com/calendar/ical/7eb2d4771f8bee6c72947bc701f074e3a2c4cb89c2ad36ee2695c0eb906bc128%40group.calendar.google.com/public/basic.ics',
-      name:    'Chicago Fire FC – Away Matches',
+      name:    'Chicago Fire FC | 2027 Sprint Season [Away Matches]',
       label:   'Away',
     },
   },
