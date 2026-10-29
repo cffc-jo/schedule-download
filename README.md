@@ -176,8 +176,11 @@ Bold (buttons and labels). They're set up in `fonts.css`. To add another
 style (e.g. Medium), convert the `.otf` to `.woff2`, put it in
 `assets/fonts/`, and copy one of the `@font-face` blocks in `fonts.css`.
 
-**Link preview** (optional) – add `assets/og-image.png` (1200×630), shown
-when the page link is shared in a message.
+**Link preview** – the card shown when the page link is texted or posted
+uses `assets/og-image.png` (1200×630: crest and "Sync the 2027 Schedule" on
+red) plus the `og:title` and `og:description` lines near the top of
+`index.html`. Update the image and those lines each season. Messaging apps
+cache previews, so a changed image can take a while to show up.
 
 **Text** – in `config.js`:
 - Section 4 (**PAGE TEXT**): the small line at the top ("Chicago Fire FC")
