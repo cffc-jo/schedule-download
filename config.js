@@ -67,7 +67,7 @@ window.CF_CONFIG = {
      ------------------------------------------------------------------------ */
   TEXT: {
     preheader: 'Chicago Fire FC',
-    heading:   'Sync the 2026 Schedule',
+    heading:   'Sync the 2027 Schedule',
   },
 
   /* ------------------------------------------------------------------------

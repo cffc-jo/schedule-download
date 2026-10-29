@@ -164,8 +164,10 @@ open the `assets` folder → **Add file** → **Upload files**. If `logo.png` is
 ever missing, the page tries `logo.svg`, then shows the text
 "Chicago Fire FC" in its place.
 
-**Favicon** – the browser-tab and home-screen icon is `assets/favicon.png`
-(the crest at 192×192).
+**Favicon** – the browser-tab icons are the crest: `assets/favicon-32.png`
+(32×32, for the tab) and `assets/favicon.png` (192×192). `assets/apple-touch-icon.png`
+(180×180, crest on white) is used when someone saves the page to an iPhone
+home screen. To replace them, upload new files with the same names.
 
 **Fonts** – the page uses MLS Tifo, served from `assets/fonts/` (WOFF2, a
 compact web format). Only three styles are loaded to keep it fast: Tifo
@@ -179,7 +181,7 @@ when the page link is shared in a message.
 
 **Text** – in `config.js`:
 - Section 4 (**PAGE TEXT**): the small line at the top ("Chicago Fire FC")
-  and the main heading ("Sync the 2026 Schedule"). Update the year each season.
+  and the main heading ("Sync the 2027 Schedule"). Update the year each season.
 - Section 2: each calendar's `name` (what it's called in the fan's calendar
   app) and `label` (the text on the All / Home / Away buttons).
 
