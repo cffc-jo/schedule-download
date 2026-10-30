@@ -376,6 +376,14 @@
       tickets.hidden = false;
       tickets.addEventListener('click', function () { track('tickets_click'); });
     }
+
+    // Outlook's "add calendar" links only work on a computer, so say so on phones.
+    if (device.os === 'ios' || device.os === 'android') {
+      document.querySelectorAll('.option[data-method="outlook"] .option-sub, .option[data-method="office"] .option-sub')
+        .forEach(function (sub) {
+          sub.textContent += ' · Works on a computer – it’ll then sync to your phone';
+        });
+    }
   }
 
   // Run everything. If something unexpected breaks, show all options.
