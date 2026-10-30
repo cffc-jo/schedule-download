@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DIAG A - Chicago Fire FC 2027 (exact copy)
+X-WR-TIMEZONE:America/Chicago
+BEGIN:VEVENT
+DTSTART:20270320T190000Z
+DTEND:20270320T210000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-05-mia@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n🎟 Get Tickets: https://www.chicagofi
+ refc.com/tickets/single\n📺 Tune in on Apple TV to watch live\n📱 Get live 
+ match updates with the Chicago Fire mobile app: https://www.chicagofirefc.c
+ om/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Soldier Field\, 1410 Special Olympics Dr\, Chicago\, IL 60605
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC vs. Inter Miami CF
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270407T230000Z
+DTEND:20270408T010000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-07-cin@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n📺 Tune in on Apple TV to watch live\
+ n📱 Get live match updates with the Chicago Fire mobile app: https://www.ch
+ icagofirefc.com/app/
+LAST-MODIFIED:20261029T150646Z
+LOCATION:TQL Stadium\, 1501 Central Pkwy\, Cincinnati\, OH 45214
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC at FC Cincinnati
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270227T200000Z
+DTEND:20270227T220000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-02-orl@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n🎟 Get Tickets: https://www.chicagofi
+ refc.com/tickets/single\n📺 Tune in on Apple TV to watch live\n📱 Get live 
+ match updates with the Chicago Fire mobile app: https://www.chicagofirefc.c
+ om/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Soldier Field\, 1410 Special Olympics Dr\, Chicago\, IL 60605
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC vs. Orlando City SC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270328T000000Z
+DTEND:20270328T020000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-06-atl@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n🎟 Get Tickets: https://www.chicagofi
+ refc.com/tickets/single\n📺 Tune in on Apple TV to watch live\n📱 Get live 
+ match updates with the Chicago Fire mobile app: https://www.chicagofirefc.c
+ om/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Soldier Field\, 1410 Special Olympics Dr\, Chicago\, IL 60605
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC vs. Atlanta United
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270411T000000Z
+DTEND:20270411T020000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-09-clb@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n🎟 Get Tickets: https://www.chicagofi
+ refc.com/tickets/single\n📺 Tune in on Apple TV to watch live\n📱 Get live 
+ match updates with the Chicago Fire mobile app: https://www.chicagofirefc.c
+ om/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Soldier Field\, 1410 Special Olympics Dr\, Chicago\, IL 60605
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC vs. Columbus Crew
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270417T190000Z
+DTEND:20270417T210000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-10-mtl@chicagofirefc.com
+CREATED:20261028T230212Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n📺 Tune in on Apple TV to watch live\
+ n📱 Get live match updates with the Chicago Fire mobile app: https://www.ch
+ icagofirefc.com/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Stade Saputo\, 4750 Rue Sherbrooke E\, Montréal\, QC H1V 3S8\, Can
+ ada
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC at CF Montréal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270502T000000Z
+DTEND:20270502T020000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-13-tor@chicagofirefc.com
+CREATED:20261028T230212Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n🎟 Get Tickets: https://www.chicagofi
+ refc.com/tickets/single\n📺 Tune in on Apple TV to watch live\n📱 Get live 
+ match updates with the Chicago Fire mobile app: https://www.chicagofirefc.c
+ om/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Soldier Field\, 1410 Special Olympics Dr\, Chicago\, IL 60605
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC vs. Toronto FC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270220T180000Z
+DTEND:20270220T200000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-01-phi@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n📺 Tune in on Apple TV to watch live\
+ n📱 Get live match updates with the Chicago Fire mobile app: https://www.ch
+ icagofirefc.com/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Subaru Park\, 1 Stadium Dr\, Chester\, PA 19013
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC at Philadelphia Union
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270404T000000Z
+DTEND:20270404T020000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-08-ne@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n🎟 Get Tickets: https://www.chicagofi
+ refc.com/tickets/single\n📺 Tune in on Apple TV to watch live\n📱 Get live 
+ match updates with the Chicago Fire mobile app: https://www.chicagofirefc.c
+ om/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Soldier Field\, 1410 Special Olympics Dr\, Chicago\, IL 60605
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC vs. New England Revolution
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270304T000000Z
+DTEND:20270304T020000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-03-dc@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n📺 Tune in on Apple TV to watch live\
+ n📱 Get live match updates with the Chicago Fire mobile app: https://www.ch
+ icagofirefc.com/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Audi Field\, 100 Potomac Ave SW\, Washington\, DC 20024
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC at D.C. United
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270422T000000Z
+DTEND:20270422T020000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-11-nyc@chicagofirefc.com
+CREATED:20261028T230212Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n🎟 Get Tickets: https://www.chicagofi
+ refc.com/tickets/single\n📺 Tune in on Apple TV to watch live\n📱 Get live 
+ match updates with the Chicago Fire mobile app: https://www.chicagofirefc.c
+ om/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Soldier Field\, 1410 Special Olympics Dr\, Chicago\, IL 60605
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC vs. New York City FC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270424T230000Z
+DTEND:20270425T010000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-12-rbny@chicagofirefc.com
+CREATED:20261028T230212Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n📺 Tune in on Apple TV to watch live\
+ n📱 Get live match updates with the Chicago Fire mobile app: https://www.ch
+ icagofirefc.com/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Sports Illustrated Stadium\, 600 Cape May St\, Harrison\, NJ 07029
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC at New York Red Bulls
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270313T200000Z
+DTEND:20270313T220000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-04-clt@chicagofirefc.com
+CREATED:20261028T230211Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n📺 Tune in on Apple TV to watch live\
+ n📱 Get live match updates with the Chicago Fire mobile app: https://www.ch
+ icagofirefc.com/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:Bank of America Stadium\, 800 S Mint St\, Charlotte\, NC 28202
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC at Charlotte FC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20270508T210000Z
+DTEND:20270508T230000Z
+DTSTAMP:20261030T142509Z
+UID:2027sprint-14-nsh@chicagofirefc.com
+CREATED:20261028T230212Z
+DESCRIPTION:⚽ 2027 MLS Sprint Season\n📺 Tune in on Apple TV to watch live\
+ n📱 Get live match updates with the Chicago Fire mobile app: https://www.ch
+ icagofirefc.com/app/
+LAST-MODIFIED:20261028T230212Z
+LOCATION:GEODIS Park\, 501 Benton Ave\, Nashville\, TN 37203
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chicago Fire FC at Nashville SC
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
